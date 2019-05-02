@@ -8,8 +8,6 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache');
 
-
-
 //Task for Saas
 gulp.task('sass', function() {
     return gulp.src('app/sass/**/*.scss') // take the sourse 

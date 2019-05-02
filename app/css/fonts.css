@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "PT_Sans-Bold";
+  src: url(PT_Sans-Web-Bold.ttf); }
+
+@font-face {
+  font-family: "PT_Sans-BoldItalic";
+  src: url(PT_Sans-Web-BoldItalic.ttf); }
+
+@font-face {
+  font-family: "PT_Sans-Italic";
+  src: url(PT_Sans-Web-Italic.ttf); }
+
+@font-face {
+  font-family: "PT_Sans-Regular";
+  src: url(PT_Sans-Web-Regular.ttf); }
+
+@font-face {
+  font-family: "PT_Sans-Narrow-Bold";
+  src: url(PT_Sans-Narrow-Web-Bold.ttf); }
+
+@font-face {
+  font-family: "PT_Sans-Narrow-Regular";
+  src: url(PT_Sans-Narrow-Web-Regular.ttf); }
