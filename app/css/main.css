@@ -1,5 +1,10 @@
 @import url("header.css");
+@import url("stat.css");
+@import url("advertising.css");
 @import url("fonts.css");
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 0; }

@@ -1,0 +1,49 @@
+.stat {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  border: #d220d8 solid 3px;
+  min-height: 320px;
+  display: flex;
+  margin-top: -160px; }
+
+.stat__message {
+  width: 320px;
+  border: #0dd84a solid 2px;
+  min-height: 320px; }
+
+.stat__table {
+  width: 640px;
+  border: #0d1ad8 solid 2px;
+  min-height: 320px; }
+
+.stat__table td {
+  width: 320px;
+  min-height: 160px;
+  border: #525355 solid 2px; }
+
+@media only screen and (max-width: 1024px) {
+  .stat {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    min-height: 500px;
+    display: block;
+    margin-top: -186px; }
+  .stat__message {
+    width: 100%;
+    min-height: 185px; }
+  .stat__table {
+    width: 100%;
+    min-height: 320px; } }
+
+@media only screen and (max-width: 768px) {
+  .stat {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    margin-top: 0; }
+  .stat__table td {
+    width: 100%;
+    min-height: 80px;
+    display: block; } }

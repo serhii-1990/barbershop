@@ -1,0 +1,41 @@
+.advertising-block {
+  min-height: 630px;
+  border: black solid 3px;
+  margin: -166px 0 0 0;
+  padding-top: 160px; }
+
+.advertising-block__list {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  border: yellow solid 2px;
+  display: flex;
+  padding: 0;
+  list-style: none; }
+
+.advertising-block__item {
+  min-height: 400px;
+  width: 320px;
+  border: red solid 2px; }
+
+@media only screen and (max-width: 1024px) {
+  .advertising-block {
+    min-height: 890px;
+    margin: -326px 0 0 0;
+    padding-top: 320px; }
+  .advertising-block__list {
+    max-width: 640px;
+    display: block; }
+  .advertising-block__item {
+    min-height: 176px;
+    width: 100%; } }
+
+@media only screen and (max-width: 768px) {
+  .advertising-block {
+    margin: 0;
+    padding-top: 0;
+    min-height: 445px; }
+  .advertising-block__list {
+    max-width: 320px; }
+  .advertising-block__item {
+    min-height: 360px; } }

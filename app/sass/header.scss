@@ -15,140 +15,149 @@
         text-transform: uppercase;
     }
     
-    .main-header {
-        width: 100%;
-        max-width: 1200px;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        background: #000000;
+    @mixin listReset {
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
     
-    .navigation__menu-bar {
-        display: none;
+    .main-header {
+        width: 100%;
+        // max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        // margin: 0 auto;
+        // background: url('../img/background_header.png');
     }
     
     .main-header__logo {
+        display: block;
         order: 2;
-        display: block;
-        background: url('../img/logo_desktop.png');
-        width: 370px;
-        height: 153px;
-        margin: 57px auto 0;
-    }
-    
-    .main-header__img {
-        display: block;
-        margin: 57px auto 0;
+        min-height: 650px;
+        // background: url('../img/logo_desktop.png');
+        border: green solid 3px;
     }
     
     .navigation {
         order: 1;
-        background: #000000;
+        border: black solid 3px;
+        min-height: 72px;
     }
     
     .navigation__wrapper {
         display: flex;
         @include centerWrapper();
+        border: orange solid 3px;
         justify-content: space-between;
     }
     
-    .site-navigation {
-        display: flex;
-        margin: 0;
-        padding: 0 30px;
-        width: 750px;
-        justify-content: space-between;
-        box-sizing: border-box;
+    .navigation__site {
+        @include listReset();
+        width: 780px;
+        border: rosybrown solid 2px;
     }
     
-    .site-navigation__item {
-        padding: 30px 0;
-        list-style-type: none;
-    }
-    
-    .site-navigation__item_active {
-        border-bottom: #826550 2px solid;
-    }
-    
-    .site-navigation__link {
-        text-decoration: none;
-        @include fontSet();
-        line-height: 14px;
-    }
-    
-    .main-header__logo {
-        order: 2;
-    }
-    
-    .login-list {
-        display: flex;
-        margin: 0;
-        padding: 0 30px;
+    .navigation__login {
+        @include listReset();
         width: 160px;
-        justify-content: space-between;
-        box-sizing: border-box;
-        position: relative;
+        border: rgb(25, 218, 231) solid 2px;
     }
     
-    .login-list__item {
-        padding: 30px 0;
-        list-style-type: none;
-    }
-    
-    .login-list__label {
-        @include fontSet();
-        line-height: 14px;
-    }
-    
-    .login-list__logIn-icon {
-        position: absolute;
-        display: block;
-        top: 32px;
-        right: 100px;
-    }
-    
+    // .navigation__wrapper {
+    //     display: flex;
+    //     @include centerWrapper();
+    //     justify-content: space-between;
+    // }
+    // .site-navigation {
+    //     display: flex;
+    //     margin: 0;
+    //     padding: 0 30px;
+    //     width: 750px;
+    //     justify-content: space-between;
+    //     box-sizing: border-box;
+    // }
+    // .site-navigation__item {
+    //     padding: 30px 0;
+    //     list-style-type: none;
+    // }
+    // .site-navigation__item_active {
+    //     border-bottom: #826550 2px solid;
+    // }
+    // .site-navigation__link {
+    //     text-decoration: none;
+    //     @include fontSet();
+    //     line-height: 14px;
+    // }
+    // .main-header__logo {
+    //     order: 2;
+    // }
+    // .login-list {
+    //     display: flex;
+    //     margin: 0;
+    //     padding: 0 30px;
+    //     width: 160px;
+    //     justify-content: space-between;
+    //     box-sizing: border-box;
+    //     position: relative;
+    // }
+    // .login-list__item {
+    //     padding: 30px 0;
+    //     list-style-type: none;
+    // }
+    // .login-list__label {
+    //     @include fontSet();
+    //     line-height: 14px;
+    // }
+    // .login-list__logIn-icon {
+    //     position: absolute;
+    //     display: block;
+    //     top: 32px;
+    //     right: 100px;
+    // }
     @media only screen and (max-width: 1024px) {
+        .main-header__logo {
+            min-height: 400px;
+        }
         .navigation__wrapper {
             max-width: 640px;
-            padding: 0 64px;
-            // justify-content: space-between;
         }
-        .site-navigation {
-            padding: 0;
+        .navigation__site {
+            @include listReset();
+            width: 570px;
+            border: rosybrown solid 2px;
         }
-        .main-header__logo {
-            background: url('../img/logo_tablet.png');
-            width: 370px;
-            height: 101px;
-        }
-        .login-list {
-            padding: 0 20px;
+        .navigation__login {
+            @include listReset();
             width: 60px;
-        }
-        .login-list__item_tablet {
-            display: none;
-        }
-        .login-list__logIn-icon {
-            position: static;
-            margin: auto;
+            border: rgb(25, 218, 231) solid 2px;
         }
     }
     
     @media only screen and (max-width: 768px) {
-        .main-header {
-            display: block;
-            flex-direction: column;
-            margin: 0 auto;
-            background: $black;
-            min-height: 0;
-            padding: 29px 0 0 0;
-        }
         .main-header__logo {
-            display: block;
-            background: url('../img/logo_mobile.png');
-            width: 226px;
-            height: 30px;
+            order: 1;
+            min-height: 85px;
+        }
+        .navigation {
+            order: 2;
+            min-height: 50px;
+            max-width: 320px;
+            width: 100%;
             margin: 0 auto;
+            padding: 0 20px;
+        }
+        .navigation__wrapper {
+            margin: 0;
+            display: block;
+        }
+        .navigation__site {
+            @include listReset();
+            width: auto;
+            border: rosybrown solid 2px;
+        }
+        .navigation__login {
+            @include listReset();
+            width: auto;
+            border: rgb(25, 218, 231) solid 2px;
         }
     }

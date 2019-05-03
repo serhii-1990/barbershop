@@ -1,0 +1,71 @@
+$white: #ffffff;
+$black: #000000;
+$gray: #404040;
+$lightGray: #4e4e4e;
+$darkGray: #353535;
+@mixin centerWrapper ($width, $max-width, $margin1, $margin2) {
+    width: $width;
+    max-width: $max-width;
+    margin: $margin1 $margin2;
+}
+
+@mixin fontSet ($fontFamily, $fontSize, $color) {
+    font-family: PT_Sans-Narrow-Bold, sans-serif;
+    font-size: 18px;
+    color: $white;
+}
+
+.stat {
+    @include centerWrapper(100%, 960px, 0, auto);
+    border: rgb(210, 32, 216) solid 3px;
+    min-height: 320px;
+    display: flex;
+    margin-top: -160px;
+}
+
+.stat__message {
+    width: 320px;
+    border: rgb(13, 216, 74) solid 2px;
+    min-height: 320px;
+}
+
+.stat__table {
+    width: 640px;
+    border: rgb(13, 26, 216) solid 2px;
+    min-height: 320px;
+}
+
+.stat__table td {
+    width: 320px;
+    min-height: 160px;
+    border: rgb(82, 83, 85) solid 2px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .stat {
+        @include centerWrapper(100%, 640px, 0, auto);
+        min-height: 500px;
+        display: block;
+        margin-top: -186px;
+    }
+    .stat__message {
+        width: 100%;
+        min-height: 185px;
+    }
+    .stat__table {
+        width: 100%;
+        min-height: 320px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .stat {
+        @include centerWrapper(100%, 320px, 0, auto);
+        margin-top: 0;
+    }
+    .stat__table td {
+        width: 100%;
+        min-height: 80px;
+        display: block;
+    }
+}
