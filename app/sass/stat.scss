@@ -10,43 +10,81 @@ $darkGray: #353535;
 }
 
 @mixin fontSet ($fontFamily, $fontSize, $color) {
-    font-family: PT_Sans-Narrow-Bold, sans-serif;
-    font-size: 18px;
-    color: $white;
+    font-family: $fontFamily; // PT_Sans-Narrow-Bold, sans-serif;
+    font-size: $fontSize;
+    color: $color;
 }
 
 .stat {
     @include centerWrapper(100%, 960px, 0, auto);
-    border: rgb(210, 32, 216) solid 3px;
-    min-height: 320px;
+    // border: rgb(210, 32, 216) solid 3px;
+    // min-height: 320px;
     display: flex;
     margin-top: -160px;
 }
 
 .stat__message {
     width: 320px;
-    border: rgb(13, 216, 74) solid 2px;
-    min-height: 320px;
+    // border: rgb(13, 216, 74) solid 2px;
+    // min-height: 320px;
+    background: $white;
+    padding: 35px 0 0 40px;
+}
+
+.stat__header {
+    margin: 0;
+    padding-right: 22px;
+    font-family: sans-serif;
+    @include fontSet('PT_Sans-Narrow-Bold', 40px, $black);
+    line-height: 40px;
+}
+
+.stat__text {
+    padding-right: 65px;
+    font-family: sans-serif;
+    @include fontSet('PT_Sans-Regular', 20px, $black);
+    line-height: 27px;
+    margin: 44px 0 0 0;
+}
+
+.stat__text_opacity {
+    opacity: 0.3;
 }
 
 .stat__table {
     width: 640px;
-    border: rgb(13, 26, 216) solid 2px;
-    min-height: 320px;
+    // border: rgb(13, 26, 216) solid 2px;
+    // min-height: 320px;
 }
 
-.stat__table td {
-    width: 320px;
-    min-height: 160px;
-    border: rgb(82, 83, 85) solid 2px;
+.stat__table {
+    // min-height: 160px;
+    // border: rgb(82, 83, 85) solid 2px;
+    td {
+        width: 320px;
+        padding: 35px;
+        font-family: sans-serif;
+        @include fontSet('PT_Sans-Narrow-Bold', 72px, $white);
+        line-height: 18px;
+    }
+    span {
+        font-family: sans-serif;
+        @include fontSet('PT_Sans-Narrow-Regular', 20px, $white);
+    }
+}
+
+.stat__table,
+tr,
+td {
+    border-collapse: collapse;
 }
 
 @media only screen and (max-width: 1024px) {
     .stat {
         @include centerWrapper(100%, 640px, 0, auto);
         min-height: 500px;
-        display: block;
         margin-top: -186px;
+        flex-wrap: wrap;
     }
     .stat__message {
         width: 100%;

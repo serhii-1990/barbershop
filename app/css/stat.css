@@ -2,25 +2,57 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  border: #d220d8 solid 3px;
-  min-height: 320px;
   display: flex;
   margin-top: -160px; }
 
 .stat__message {
   width: 320px;
-  border: #0dd84a solid 2px;
-  min-height: 320px; }
+  background: #ffffff;
+  padding: 35px 0 0 40px; }
+
+.stat__header {
+  margin: 0;
+  padding-right: 22px;
+  font-family: sans-serif;
+  font-family: "PT_Sans-Narrow-Bold";
+  font-size: 40px;
+  color: #000000;
+  line-height: 40px; }
+
+.stat__text {
+  padding-right: 65px;
+  font-family: sans-serif;
+  font-family: "PT_Sans-Regular";
+  font-size: 20px;
+  color: #000000;
+  line-height: 27px;
+  margin: 44px 0 0 0; }
+
+.stat__text_opacity {
+  opacity: 0.3; }
 
 .stat__table {
-  width: 640px;
-  border: #0d1ad8 solid 2px;
-  min-height: 320px; }
+  width: 640px; }
 
 .stat__table td {
   width: 320px;
-  min-height: 160px;
-  border: #525355 solid 2px; }
+  padding: 35px;
+  font-family: sans-serif;
+  font-family: "PT_Sans-Narrow-Bold";
+  font-size: 72px;
+  color: #ffffff;
+  line-height: 18px; }
+
+.stat__table span {
+  font-family: sans-serif;
+  font-family: "PT_Sans-Narrow-Regular";
+  font-size: 20px;
+  color: #ffffff; }
+
+.stat__table,
+tr,
+td {
+  border-collapse: collapse; }
 
 @media only screen and (max-width: 1024px) {
   .stat {
@@ -28,8 +60,8 @@
     max-width: 640px;
     margin: 0 auto;
     min-height: 500px;
-    display: block;
-    margin-top: -186px; }
+    margin-top: -186px;
+    flex-wrap: wrap; }
   .stat__message {
     width: 100%;
     min-height: 185px; }

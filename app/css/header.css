@@ -1,82 +1,296 @@
 .main-header {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background: #000000; }
 
 .main-header__logo {
   display: block;
   order: 2;
   min-height: 650px;
-  border: green solid 3px; }
+  background: url("../img/background_header.png");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; }
+
+.main-header__logo img {
+  margin-top: 57px;
+  width: 370px;
+  height: 153px; }
 
 .navigation {
-  order: 1;
-  border: black solid 3px;
-  min-height: 72px; }
+  order: 1; }
 
 .navigation__wrapper {
   display: flex;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  border: orange solid 3px;
   justify-content: space-between; }
 
-.navigation__site {
+.site-list {
   margin: 0;
   padding: 0;
   list-style: none;
   width: 780px;
-  border: rosybrown solid 2px; }
+  display: flex;
+  flex-wrap: wrap; }
 
-.navigation__login {
+.site-list__item_active {
+  position: relative; }
+  .site-list__item_active::after {
+    content: "";
+    position: absolute;
+    right: 31px;
+    left: 31px;
+    bottom: -3px;
+    height: 3px;
+    background: #826550; }
+
+.site-list__item a {
+  font-family: PT_Sans-Narrow-Bold, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 31px;
+  padding-left: 31px; }
+
+.site-list__item a[href]:hover {
+  color: #826550; }
+
+.site-list__item a[href]:active {
+  color: #ffffff;
+  background: #000000;
+  opacity: 0.3; }
+
+.user-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 160px;
-  border: #19dae7 solid 2px; }
+  max-width: 160px;
+  position: relative; }
+
+.user-list a {
+  display: block;
+  font-family: PT_Sans-Narrow-Bold, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px; }
+
+.navigation__toggle {
+  display: none; }
+
+.user-list__login svg {
+  display: block;
+  position: absolute;
+  fill: #ffffff;
+  top: 23px;
+  left: 20px;
+  width: 16px;
+  height: 16px; }
 
 @media only screen and (max-width: 1024px) {
   .main-header__logo {
-    min-height: 400px; }
+    min-height: 400px;
+    background: url("../img/background_tablet.png");
+    background-position: center -9px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .main-header__logo img {
+      margin-top: 39px;
+      width: 370px;
+      height: 101px; }
   .navigation__wrapper {
     max-width: 640px; }
-  .navigation__site {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 570px;
-    border: rosybrown solid 2px; }
-  .navigation__login {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 60px;
-    border: #19dae7 solid 2px; } }
+  .site-list {
+    width: 570px; }
+  .site-list__item {
+    margin-right: 32px; }
+    .site-list__item:last-child {
+      margin-right: 0; }
+    .site-list__item_active {
+      position: relative; }
+      .site-list__item_active::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -3px;
+        height: 3px;
+        background: #826550; }
+  .site-list__item a {
+    padding-right: 0;
+    padding-left: 0; }
+  .site-list__item a[href]:hover {
+    color: #826550;
+    background: #ffffff; }
+  .site-list__item a[href]:active {
+    color: #ffffff;
+    background: #000000;
+    opacity: 0.3; }
+  .user-list {
+    width: 60px; }
+  .user-list a {
+    font-size: 0; }
+  .user-list__login svg {
+    top: 23px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    fill: #ffffff; } }
 
 @media only screen and (max-width: 768px) {
   .main-header__logo {
     order: 1;
+    background: #242424;
     min-height: 85px; }
+    .main-header__logo img {
+      margin-top: 29px;
+      width: 226px;
+      height: 30px; }
   .navigation {
     order: 2;
-    min-height: 50px;
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px; }
+    position: relative;
+    min-height: 51px;
+    background: #826550; }
   .navigation__wrapper {
     margin: 0;
     display: block; }
-  .navigation__site {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  .site-list {
+    font-weight: bold;
     width: auto;
-    border: rosybrown solid 2px; }
-  .navigation__login {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: auto;
-    border: #19dae7 solid 2px; } }
+    display: block; }
+  .user-list {
+    width: auto; }
+  .user-list a {
+    font-size: 18px; }
+  .navigation_closed .navigation__toggle::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background: #ffffff;
+    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff; }
+  .navigation_closed .navigation__toggle:active::before {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3); }
+  .navigation_closed .site-list__item {
+    display: none; }
+    .navigation_closed .site-list__item_active {
+      display: block; }
+  .navigation_closed .user-list__item {
+    display: none; }
+  .navigation_opened .navigation__toggle {
+    top: 0;
+    left: 0; }
+    .navigation_opened .navigation__toggle::before, .navigation_opened .navigation__toggle::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 18px;
+      width: 36px;
+      height: 2px;
+      background: #ffffff; }
+    .navigation_opened .navigation__toggle::before {
+      transform: rotate(45deg); }
+    .navigation_opened .navigation__toggle::after {
+      transform: rotate(-45deg); }
+    .navigation_opened .navigation__toggle:active::before, .navigation_opened .navigation__toggle:active::after {
+      background: rgba(255, 255, 255, 0.3); }
+  .navigation__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 50px;
+    background-color: #6a4d38;
+    cursor: pointer;
+    border: none; }
+    .navigation__toggle:hover, .navigation__toggle:active {
+      background: #826550; }
+  .site-list__item {
+    margin-right: 0px; }
+    .site-list__item_active::after {
+      display: none; }
+  .site-list__item a {
+    display: block;
+    padding: 12px 21px;
+    padding-bottom: 13px;
+    background-color: #826550;
+    border-top: 1px solid #886e5b;
+    border-bottom: 1px solid #71543f; }
+  .site-list a[href]:hover {
+    background: #755a46;
+    border-top-color: #755a46; }
+  .site-list a[href]:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #6a4d38;
+    border-top-color: #6a4d38; }
+  .user-list .user-list__login {
+    position: relative;
+    padding: 18px 20px;
+    padding-left: 50px;
+    text-transform: none;
+    display: block; }
+  .user-list svg {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    font-weight: bold;
+    fill: #ffffff; }
+    .user-list svg:hover {
+      fill: red; }
+  .navigation_closed .site-list__item_active a {
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px; }
+  .navigation_opened .navigation__wrapper {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 70px;
+    min-height: 80vh;
+    background-color: #6a4d38;
+    z-index: 10; }
+  .navigation_opened .navigation__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 7px;
+    height: 100%;
+    box-shadow: inset 4px 0 7px -2px rgba(0, 0, 0, 0.4); }
+  .navigation_nojs .navigation__toggle {
+    display: none; }
+  .navigation_nojs .navigation__wrapper {
+    position: static;
+    min-height: 0; }
+  .navigation_nojs .site-list__item_active a {
+    text-align: left;
+    padding-left: 21px;
+    padding-right: 21px; }
+  .navigation_nojs .user-list__item {
+    display: block;
+    background: #6a4d38; } }
